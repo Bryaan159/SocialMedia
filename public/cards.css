@@ -3,6 +3,7 @@
 :root{
     --mainBackground: #17141d;
     --mainColorLetter:rgb(245, 245, 245);
+    --mainColorCircle:#ff8a00;
 }
 
 body{
@@ -16,7 +17,7 @@ body{
     display: flex;
     padding: 3rem;
     /* Barra de desplazamiento */
-    overflow-x: scroll;
+    /* overflow-x: scroll; */
 }
 /* Duda */
 .card-List::-webkit-scrollbar-thumb{
@@ -37,4 +38,92 @@ body{
     width: 400px;
     min-width: 250px;
     padding: 1.5rem;
+
+    border-radius: 16px;
+    background-color: var(--mainBackground);
+    box-shadow: -1rem 0 3rem #000;
+    
+    transition: .2s;
 }
+.card:hover{
+    transform: translateY(-1rem);
+    box-shadow: -1rem 0 4rem #000;
+}
+
+/* No sé para que es */
+.card:hover~.card {
+    transform: translateX(130px);
+}
+
+.card:not(:first-child){
+    margin-left: -130px;
+}
+.card-Author{
+    position: relative;
+    display: grid;
+    grid-template-columns: 75px 1fr;
+    align-items: center;
+    margin: 3rem 0 0;
+}
+
+.author-avatar img{
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    /* Importante */
+    filter: grayscale(100%);
+    margin: 16px 10px;
+}
+.half-circle{
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 48px;
+    /* Importante */
+    fill: none;
+    stroke: var(--mainColorCircle);
+    stroke-width: 5;
+    stroke-linecap: round;
+}
+.author-Name-Prefix{
+    font-style: normal;
+    font-weight: 700;
+    color: #7a7a8c;
+}
+
+.card-Header{
+    margin-bottom: auto;
+}
+
+.card-Header{
+    font-size: 14px;
+    margin: 0 0 1rem;
+    color: #7a7a8c;
+}
+
+.card-Header h2{
+    font-size: 20px;
+    margin:.25rem 0 auto;
+    cursor: pointer;
+}
+
+.card-Header h2:hover{
+    background: linear-gradient(90deg,#ff8a00,#e52e71);
+    text-shadow: none;
+    background-clip: text;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.tags{
+    margin: 1rem 0 2rem;
+    padding: .5rem 0 1rem;
+    line-height: 2;
+    margin-bottom: 0;
+}
+/* .tags a{
+    font
+} */
