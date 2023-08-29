@@ -4,6 +4,7 @@
     --mainBackground: #17141d;
     --mainColorLetter:rgb(245, 245, 245);
     --mainColorCircle:#ff8a00;
+    --mainColorTags:#7a7a8c;
 }
 
 body{
@@ -12,12 +13,31 @@ body{
     background-color: var(--mainBackground);
     color: var(--mainColorLetter);
     font-family: 'DM Mono', monospace;
+    overflow-x: none;
+    overflow-y: none;
+}
+.title{
+    font-style: normal;
+    font-weight:500;
+    font-size: 3.0rem;
+    text-align: center;
+    color:var(--mainColorTags);
+    text-decoration:uppercase;
+}
+.text{
+    margin-top: 1rem;
+    font-size: 13px; /* Tamaño de fuente del párrafo */
+    line-height: 1.6;
+    text-align: center; /* Centrar el texto */
+    /* Importante */
+    max-width: 800px; /* Ancho máximo del párrafo */
+    margin: 0 auto; /* Centrar el párrafo horizontalmente */
 }
 .card-List{
     display: flex;
-    padding: 3rem;
+    padding: 4rem;
+    margin-top: -2rem;
     /* Barra de desplazamiento */
-    /* overflow-x: scroll; */
 }
 /* Duda */
 .card-List::-webkit-scrollbar-thumb{
@@ -72,7 +92,6 @@ body{
     height: 40px;
     border-radius: 50%;
     /* Importante */
-    filter: grayscale(100%);
     margin: 16px 10px;
 }
 .half-circle{
@@ -84,13 +103,13 @@ body{
     /* Importante */
     fill: none;
     stroke: var(--mainColorCircle);
-    stroke-width: 5;
+    stroke-width: 8;
     stroke-linecap: round;
 }
 .author-Name-Prefix{
     font-style: normal;
     font-weight: 700;
-    color: #7a7a8c;
+    color: var(--mainColorTags);
 }
 
 .card-Header{
@@ -100,7 +119,7 @@ body{
 .card-Header{
     font-size: 14px;
     margin: 0 0 1rem;
-    color: #7a7a8c;
+    color: var(--mainColorTags);
 }
 
 .card-Header h2{
@@ -124,6 +143,39 @@ body{
     line-height: 2;
     margin-bottom: 0;
 }
-/* .tags a{
-    font
-} */
+.tags a{
+    font-style: normal;
+    font-weight:700;
+    font-size: .5rem;
+    color:var(--mainColorTags);
+    text-decoration:uppercase;
+    font-size: .66rem;
+    border: 3px solid #28242f;
+    border-radius: 3rem;
+    padding: .2rem .85rem .25rem;
+    position: relative;
+}
+.button-52{
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    padding: 13px 20px 13px;
+    /* Importante */
+    outline: 0;
+    border: 1px solid black;
+    cursor: pointer;
+    background-color:#ffe54c;
+    /* Importante */
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+.button-52-link{
+    text-decoration: none; /* Elimina el subrayado */
+    color: inherit; /* Hereda el color del texto del botón */
+    display: block; /* Hace que el botón sea un bloque */
+}
+.button-52:hover:after {
+    top: 0px;
+    left: 0px;
+  }
