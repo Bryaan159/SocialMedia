@@ -33,6 +33,11 @@ body{
     max-width: 800px; /* Ancho máximo del párrafo */
     margin: 0 auto; /* Centrar el párrafo horizontalmente */
 }
+.text1{
+    font-style: normal;
+    font-size: 15px;
+    font-weight: 500;
+}
 .card-List{
     display: flex;
     padding: 4rem;
@@ -83,7 +88,7 @@ body{
     display: grid;
     grid-template-columns: 75px 1fr;
     align-items: center;
-    margin: 3rem 0 0;
+    margin: 1.5rem 0 0;
 }
 
 .author-avatar img{
@@ -108,7 +113,7 @@ body{
 }
 .author-Name-Prefix{
     font-style: normal;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--mainColorTags);
 }
 
@@ -148,7 +153,7 @@ body{
     font-weight:700;
     font-size: .5rem;
     color:var(--mainColorTags);
-    text-decoration:uppercase;
+    text-decoration:none;
     font-size: .66rem;
     border: 3px solid #28242f;
     border-radius: 3rem;
